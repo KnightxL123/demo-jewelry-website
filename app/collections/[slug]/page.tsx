@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
@@ -55,13 +56,24 @@ export default function ProductDetailPage({
 
             <div className="grid grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-20">
               <Reveal>
-                <div className="aspect-[4/5] w-full overflow-hidden bg-ink/5">
-                  <ImagePlaceholder
-                    tone={product.placeholderTone}
-                    eyebrow={product.category}
-                    caption={product.name}
-                    className="h-full w-full"
-                  />
+                <div className="relative aspect-[4/5] w-full overflow-hidden bg-ink/5">
+                  {product.image ? (
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      sizes="(min-width: 1024px) 50vw, 100vw"
+                      priority
+                      className="object-cover"
+                    />
+                  ) : (
+                    <ImagePlaceholder
+                      tone={product.placeholderTone}
+                      eyebrow={product.category}
+                      caption={product.name}
+                      className="h-full w-full"
+                    />
+                  )}
                 </div>
               </Reveal>
 

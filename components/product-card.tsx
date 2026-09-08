@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
@@ -12,12 +13,22 @@ export function ProductCard({ product }: { product: Product }) {
       aria-label={`View ${product.name}`}
     >
       <div className="relative aspect-[4/5] overflow-hidden bg-ink/5">
-        <div className="h-full w-full transition-transform duration-[1400ms] ease-luxury group-hover:scale-[1.06]">
-          <ImagePlaceholder
-            tone={product.placeholderTone}
-            eyebrow={product.category}
-            caption={product.name}
-          />
+        <div className="relative h-full w-full transition-transform duration-[1400ms] ease-luxury group-hover:scale-[1.06]">
+          {product.image ? (
+            <Image
+              src={product.image}
+              alt={product.name}
+              fill
+              sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+              className="object-cover"
+            />
+          ) : (
+            <ImagePlaceholder
+              tone={product.placeholderTone}
+              eyebrow={product.category}
+              caption={product.name}
+            />
+          )}
         </div>
 
         <span className="pointer-events-none absolute left-5 top-5 font-serif text-sm text-ink/50 md:text-base">
