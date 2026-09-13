@@ -1,15 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
 import { site } from "@/data/site";
 import { buttonVariants } from "@/components/ui/button";
+import { HeroVideo } from "@/components/hero-video";
 
 const ease = [0.16, 1, 0.3, 1] as const;
-
-const HERO_IMAGE = "/images/hero-campaign.png";
 
 export function Hero() {
   return (
@@ -20,28 +18,15 @@ export function Hero() {
         animate={{ scale: 1 }}
         transition={{ duration: 2.6, ease }}
       >
-        <motion.div
-          className="relative h-full w-full"
-          animate={{ scale: [1, 1.05] }}
-          transition={{
-            duration: 22,
-            repeat: Infinity,
-            repeatType: "mirror",
-            ease: "easeInOut",
-          }}
-        >
-          <Image
-            src={HERO_IMAGE}
-            alt="Model wearing an 18K gold diamond ring, bracelet and pendant"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-[68%_center] md:object-center"
-          />
-        </motion.div>
+        {/* The montage cuts roughly every 1.2s; the old looping Ken Burns zoom
+            fought that, so only the entrance settle above remains. */}
+        <div className="relative h-full w-full">
+          <HeroVideo />
+        </div>
       </motion.div>
 
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/10 to-ink/30" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/20 to-ink/40" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/25 to-transparent md:via-ink/10" />
 
       <div className="container-luxe relative z-10 flex w-full flex-col items-start pb-24 pt-32 md:pb-28">
         <motion.span
