@@ -1,8 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, MapPin } from "lucide-react";
 
 import { site } from "@/data/site";
-import { ImagePlaceholder } from "@/components/image-placeholder";
 import { Reveal } from "@/components/reveal";
 
 export function HouseTeaser() {
@@ -10,12 +10,13 @@ export function HouseTeaser() {
     <section className="bg-ivory py-28 md:py-36">
       <div className="container-luxe grid grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-20">
         <Reveal>
-          <div className="aspect-[4/5] w-full overflow-hidden lg:aspect-[5/6]">
-            <ImagePlaceholder
-              tone="beige"
-              eyebrow="Showroom Photography"
-              caption="Showroom — Exterior"
-              className="h-full w-full"
+          <div className="relative aspect-[4/5] w-full overflow-hidden bg-ink/5 lg:aspect-[5/6]">
+            <Image
+              src="/images/hands-craftsmanship.png"
+              alt="A jeweller inspecting an 18K gold diamond ring through a loupe"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
             />
           </div>
         </Reveal>
