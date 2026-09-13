@@ -26,3 +26,6 @@ next-env.d.ts
 
 # local source assets (originals live outside the build)
 /Demo Luxury Assets/
+
+.vercel
+.env*
