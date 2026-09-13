@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 import { SiteHeader } from "@/components/site-header";
 import { PageHeading } from "@/components/page-heading";
-import { ImagePlaceholder } from "@/components/image-placeholder";
 import { WhyDarlings } from "@/components/why-darlings";
 import { Reveal } from "@/components/reveal";
 
@@ -56,12 +56,13 @@ export default function AboutPage() {
             </div>
 
             <Reveal className="order-1 lg:order-2">
-              <div className="aspect-[4/5] w-full overflow-hidden">
-                <ImagePlaceholder
-                  tone="champagne"
-                  eyebrow="Editorial Photography"
-                  caption="Hands & Craftsmanship"
-                  className="h-full w-full"
+              <div className="relative aspect-[4/5] w-full overflow-hidden bg-ink/5">
+                <Image
+                  src="/images/hands-craftsmanship.png"
+                  alt="A jeweller inspecting an 18K gold diamond ring through a loupe"
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover"
                 />
               </div>
             </Reveal>
