@@ -1,12 +1,14 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
 import { buttonVariants } from "@/components/ui/button";
-import { ImagePlaceholder } from "@/components/image-placeholder";
 
 const ease = [0.16, 1, 0.3, 1] as const;
+
+const HERO_IMAGE = "/images/hero-campaign.png";
 
 export function Hero() {
   return (
@@ -18,7 +20,7 @@ export function Hero() {
         transition={{ duration: 2.6, ease }}
       >
         <motion.div
-          className="h-full w-full"
+          className="relative h-full w-full"
           animate={{ scale: [1, 1.05] }}
           transition={{
             duration: 22,
@@ -27,13 +29,13 @@ export function Hero() {
             ease: "easeInOut",
           }}
         >
-          <ImagePlaceholder
-            tone="ink"
-            eyebrow="Campaign Photography"
-            caption="Hero — Editorial Jewelry Portrait"
-            className="h-full w-full"
-            markClassName="h-16 w-16 md:h-24 md:w-24"
-            showCaption={false}
+          <Image
+            src={HERO_IMAGE}
+            alt="Model wearing an 18K gold diamond ring, bracelet and pendant"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[68%_center] md:object-center"
           />
         </motion.div>
       </motion.div>

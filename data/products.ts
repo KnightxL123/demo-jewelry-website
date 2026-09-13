@@ -33,6 +33,7 @@ export const products: Product[] = [
     detail:
       "A refined solitaire silhouette set in warm 18K gold, designed to catch the light with quiet confidence. A versatile piece suited to both everyday elegance and life's defining moments.",
     placeholderTone: "champagne",
+    image: "/images/signature-diamond-ring.png",
   },
   {
     slug: "diamond-tennis-bracelet",
@@ -44,6 +45,7 @@ export const products: Product[] = [
     detail:
       "A continuous line of diamonds set along a slender 18K gold band. Understated and endlessly wearable, it brings a quiet sparkle to the wrist for day or evening.",
     placeholderTone: "ink",
+    image: "/images/diamond-tennis-bracelet.png",
   },
   {
     slug: "18k-gold-necklace",
@@ -68,6 +70,7 @@ export const products: Product[] = [
     detail:
       "Round brilliant diamonds set in a classic four-prong mount. An essential pairing of clarity and craftsmanship, made to be worn every day and passed down for years to come.",
     placeholderTone: "champagne",
+    image: "/images/classic-diamond-studs.png",
   },
   {
     slug: "gold-link-bracelet",
@@ -79,6 +82,7 @@ export const products: Product[] = [
     detail:
       "Bold sculptural links rendered in polished 18K gold. A confident, tactile piece that anchors the wrist and pairs effortlessly with both tailored and relaxed dressing.",
     placeholderTone: "ink",
+    image: "/images/gold-link-bracelet.png",
   },
   {
     slug: "diamond-pendant",
@@ -90,6 +94,7 @@ export const products: Product[] = [
     detail:
       "A single diamond suspended on a delicate 18K gold chain. Quietly luminous, it is designed to sit close to the collarbone — a personal, everyday reminder of what matters.",
     placeholderTone: "beige",
+    image: "/images/diamond-pendant.png",
   },
 ];
 
