@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, MapPin, Phone } from "lucide-react";
 
 import { site } from "@/data/site";
 import { SiteHeader } from "@/components/site-header";
 import { PageHeading } from "@/components/page-heading";
-import { ImagePlaceholder } from "@/components/image-placeholder";
 import { Reveal } from "@/components/reveal";
 import { buttonVariants } from "@/components/ui/button";
 
@@ -18,6 +18,13 @@ export const metadata: Metadata = {
 const directionsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
   site.location.full,
 )}`;
+
+/** Demo stand-ins for showroom interior photography — reuses the campaign macros. */
+const showroomDetails = [
+  { src: "/images/18k-gold-necklace.png", alt: "An 18K gold pendant necklace displayed on velvet" },
+  { src: "/images/gold-link-bracelet.png", alt: "A polished 18K gold link bracelet on a dark display surface" },
+  { src: "/images/classic-diamond-studs.png", alt: "A pair of diamond stud earrings displayed on velvet" },
+] as const;
 
 export default function TheHousePage() {
   return (
@@ -34,12 +41,13 @@ export default function TheHousePage() {
         <section className="bg-ivory pb-28 md:pb-36">
           <div className="container-luxe grid grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-20">
             <Reveal>
-              <div className="aspect-[4/5] w-full overflow-hidden lg:aspect-auto lg:h-full">
-                <ImagePlaceholder
-                  tone="ink"
-                  eyebrow="Showroom Photography"
-                  caption="Showroom — Interior"
-                  className="h-full w-full"
+              <div className="relative aspect-[4/5] w-full overflow-hidden bg-ink/5 lg:aspect-auto lg:h-full">
+                <Image
+                  src="/images/editorial-lifestyle.png"
+                  alt="A client wearing fine gold and diamond jewelry"
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover object-[70%_center]"
                 />
               </div>
             </Reveal>
@@ -114,14 +122,15 @@ export default function TheHousePage() {
             </Reveal>
 
             <div className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-3">
-              {(["beige", "ink", "champagne"] as const).map((tone, i) => (
-                <Reveal key={tone} delay={i * 0.1}>
-                  <div className="aspect-[4/5] overflow-hidden">
-                    <ImagePlaceholder
-                      tone={tone}
-                      eyebrow="Showroom Photography"
-                      caption={`Interior detail ${i + 1}`}
-                      className="h-full w-full"
+              {showroomDetails.map((detail, i) => (
+                <Reveal key={detail.src} delay={i * 0.1}>
+                  <div className="relative aspect-[4/5] overflow-hidden bg-ink/5">
+                    <Image
+                      src={detail.src}
+                      alt={detail.alt}
+                      fill
+                      sizes="(min-width: 640px) 33vw, 100vw"
+                      className="object-cover"
                     />
                   </div>
                 </Reveal>
