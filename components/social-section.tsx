@@ -1,10 +1,24 @@
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 import { site } from "@/data/site";
-import { ImagePlaceholder } from "@/components/image-placeholder";
 import { Reveal } from "@/components/reveal";
 
-const tones = ["champagne", "ink", "beige", "ivory", "beige", "ink", "champagne", "ivory"] as const;
+/**
+ * Demo feed — reuses the campaign and product photography rather than
+ * inventing separate social posts. Replace with the client's real Instagram
+ * grid before launch.
+ */
+const posts = [
+  { src: "/images/editorial-lifestyle.png", alt: "Hands wearing fine gold and diamond jewelry" },
+  { src: "/images/signature-diamond-ring.png", alt: "Signature Diamond Ring" },
+  { src: "/images/diamond-tennis-bracelet.png", alt: "Diamond Tennis Bracelet" },
+  { src: "/images/hero-campaign.png", alt: "Campaign portrait wearing 18K gold and diamonds" },
+  { src: "/images/18k-gold-necklace.png", alt: "18K Gold Necklace" },
+  { src: "/images/classic-diamond-studs.png", alt: "Classic Diamond Studs" },
+  { src: "/images/gold-link-bracelet.png", alt: "Gold Link Bracelet" },
+  { src: "/images/diamond-pendant.png", alt: "Diamond Pendant" },
+] as const;
 
 export function SocialSection() {
   return (
@@ -35,8 +49,8 @@ export function SocialSection() {
         </div>
 
         <div className="mt-14 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
-          {tones.map((tone, i) => (
-            <Reveal key={i} delay={(i % 4) * 0.06}>
+          {posts.map((post, i) => (
+            <Reveal key={post.src} delay={(i % 4) * 0.06}>
               <a
                 href={site.social.instagram.href}
                 target="_blank"
@@ -44,9 +58,15 @@ export function SocialSection() {
                 className="group block"
                 aria-label="View on Instagram"
               >
-                <div className="aspect-square overflow-hidden">
-                  <div className="h-full w-full transition-transform duration-[1200ms] ease-luxury group-hover:scale-[1.08]">
-                    <ImagePlaceholder tone={tone} caption={`Instagram post ${i + 1}`} showCaption={false} />
+                <div className="aspect-square overflow-hidden bg-ink/5">
+                  <div className="relative h-full w-full transition-transform duration-[1200ms] ease-luxury group-hover:scale-[1.08]">
+                    <Image
+                      src={post.src}
+                      alt={post.alt}
+                      fill
+                      sizes="(min-width: 640px) 25vw, 50vw"
+                      className="object-cover object-center"
+                    />
                   </div>
                 </div>
               </a>
