@@ -3,6 +3,7 @@ import { Jost, Playfair_Display } from "next/font/google";
 
 import "./globals.css";
 import { SiteFooter } from "@/components/site-footer";
+import { site } from "@/data/site";
 
 const display = Playfair_Display({
   subsets: ["latin"],
@@ -20,13 +21,13 @@ const body = Jost({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://darlings-finejewels-demo.example"),
+  metadataBase: new URL("https://aurelle-finejewels-demo.example"),
   title: {
-    default: "Darling's FineJewels by Candys — Fine Gold & Diamond Jewelry",
-    template: "%s — Darling's FineJewels",
+    default: `${site.brandName} — ${site.tagline}`,
+    template: `%s — ${site.brandName}`,
   },
   description:
-    "Premium gold and diamond jewelry, imported and local, curated for life's most meaningful moments. Manila, Philippines.",
+    `Premium gold and diamond jewelry, imported and local, curated for life's most meaningful moments. ${site.location.city}.`,
 };
 
 export default function RootLayout({

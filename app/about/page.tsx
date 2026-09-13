@@ -5,13 +5,14 @@ import { ArrowUpRight } from "lucide-react";
 
 import { SiteHeader } from "@/components/site-header";
 import { PageHeading } from "@/components/page-heading";
-import { WhyDarlings } from "@/components/why-darlings";
+import { WhyAurelle } from "@/components/why-aurelle";
 import { Reveal } from "@/components/reveal";
+import { site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Darling's FineJewels curates premium gold and diamond jewelry, imported and local, for life's most meaningful moments.",
+    `${site.brandName} curates premium gold and diamond jewelry, imported and local, for life's most meaningful moments.`,
 };
 
 export default function AboutPage() {
@@ -22,7 +23,7 @@ export default function AboutPage() {
         <PageHeading
           eyebrow="About"
           title="About"
-          italicTitle="Darling’s."
+          italicTitle={`${site.shortName}.`}
           description="A considered edit of fine gold and diamond jewelry — imported and local pieces, chosen for craftsmanship and lasting appeal."
         />
 
@@ -39,7 +40,7 @@ export default function AboutPage() {
               </Reveal>
               <Reveal delay={0.2}>
                 <p className="mt-7 max-w-md text-[15px] leading-relaxed text-ink/60">
-                  Darling&rsquo;s FineJewels brings together an edit of premium
+                  {site.brandName} brings together an edit of premium
                   gold and diamond pieces — imported and local — selected for
                   quality, wearability and lasting design. Our aim is simple:
                   to help you find a piece that feels like it was always
@@ -69,7 +70,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <WhyDarlings />
+        <WhyAurelle />
 
         <section className="bg-ivory py-24 md:py-28">
           <div className="container-luxe flex flex-col items-start justify-between gap-8 border-t border-ink/10 pt-14 md:flex-row md:items-center">

@@ -14,7 +14,7 @@ export function HouseTeaser() {
             <ImagePlaceholder
               tone="beige"
               eyebrow="Showroom Photography"
-              caption="San Miguel Building, Sta. Cruz"
+              caption="Showroom — Exterior"
               className="h-full w-full"
             />
           </div>
@@ -26,14 +26,14 @@ export function HouseTeaser() {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="mt-5 font-serif text-4xl leading-tight text-ink sm:text-5xl">
-              The House of <span className="italic text-gold-dark">Darling&rsquo;s</span>
+              The House of <span className="italic text-gold-dark">{site.shortName}</span>
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
             <p className="mt-7 max-w-md text-[15px] leading-relaxed text-ink/60">
-              From carefully selected pieces to personal service, Darling&rsquo;s
-              FineJewels brings together timeless jewelry and modern elegance
-              for clients who value beauty, craftsmanship and meaning.
+              From carefully selected pieces to personal service, {site.brandName}{" "}
+              brings together timeless jewelry and modern elegance for clients
+              who value beauty, craftsmanship and meaning.
             </p>
           </Reveal>
 

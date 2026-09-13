@@ -1,28 +1,47 @@
-// Brand + business information for Darling's FineJewels by Candys.
-// This is a design/sales demo — replace with verified client copy before launch.
+// ---------------------------------------------------------------------------
+// DEMO BRAND + BUSINESS INFORMATION
+// ---------------------------------------------------------------------------
+// "Aurelle Fine Jewels" is a fictional house invented for this design demo.
+// It is not a real business, and the contact details below are placeholders —
+// the phone number, address and social links do not belong to anyone.
+//
+// This file is the single source of truth for the brand: renaming the demo for
+// a different client means editing this file only, not hunting through JSX.
+// Replace every field with verified client information before launch.
+// ---------------------------------------------------------------------------
 
 export const site = {
-  brandName: "Darling's FineJewels",
-  brandFull: "Darling's FineJewels by Candys",
+  brandName: "Aurelle Fine Jewels",
+  /** Short form, used in possessive/standalone contexts: "The House of ___". */
+  shortName: "Aurelle",
+  /** The logo lockup renders as `lead` in serif + `accent` in italic gold. */
+  brandMark: {
+    lead: "Aurelle",
+    accent: "Fine Jewels",
+  },
   tagline: "Fine Gold & Diamond Jewelry",
   location: {
     city: "Manila, Philippines",
-    line1: "1466 San Miguel Building",
-    line2: "CM Recto Ave",
-    line3: "Sta. Cruz, Manila, Philippines",
-    full: "1466 San Miguel Building, CM Recto Ave, Sta. Cruz, Manila, Philippines",
+    /** Bare city name, for eyebrow labels like "Aurelle Fine Jewels · Manila". */
+    cityShort: "Manila",
+    line1: "Aurelle House",
+    line2: "24 Camia Street",
+    line3: "Makati, Metro Manila, Philippines",
+    full: "Aurelle House, 24 Camia Street, Makati, Metro Manila, Philippines",
   },
-  phone: "0917 814 6511",
-  phoneHref: "tel:+639178146511",
+  // Placeholder contact details — not a working number.
+  phone: "0917 000 0000",
+  phoneHref: "tel:+639170000000",
   social: {
+    // Placeholder links: these point at the platforms themselves rather than at
+    // an account, so the demo never sends anyone to a stranger's real profile.
     facebook: {
-      label: "Darling's FineJewels By Candys",
-      // Exact page URL not provided — links to a Facebook search for the page name.
-      href: "https://www.facebook.com/search/pages/?q=Darling%27s%20FineJewels%20By%20Candys",
+      label: "Aurelle Fine Jewels",
+      href: "https://www.facebook.com/",
     },
     instagram: {
-      handle: "@darlings_fin3jewels",
-      href: "https://instagram.com/darlings_fin3jewels",
+      handle: "@aurellefinejewels",
+      href: "https://www.instagram.com/",
     },
   },
 } as const;

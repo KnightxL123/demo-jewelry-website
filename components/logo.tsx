@@ -1,3 +1,4 @@
+import { site } from "@/data/site";
 import { cn } from "@/lib/utils";
 
 export function Logo({
@@ -15,8 +16,8 @@ export function Logo({
         className,
       )}
     >
-      Darling&rsquo;s{" "}
-      <span className="italic text-gold-dark/90">FineJewels</span>
+      {site.brandMark.lead}{" "}
+      <span className="italic text-gold-dark/90">{site.brandMark.accent}</span>
     </span>
   );
 }

@@ -5,11 +5,12 @@ import { SiteHeader } from "@/components/site-header";
 import { PageHeading } from "@/components/page-heading";
 import { ProductCard } from "@/components/product-card";
 import { Reveal } from "@/components/reveal";
+import { site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Collections",
   description:
-    "A curated edit of gold and diamond jewelry — sample pieces from Darling's FineJewels.",
+    `A curated edit of gold and diamond jewelry — sample pieces from ${site.brandName}.`,
 };
 
 export default function CollectionsPage() {

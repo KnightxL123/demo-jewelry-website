@@ -12,7 +12,7 @@ import { buttonVariants } from "@/components/ui/button";
 export const metadata: Metadata = {
   title: "The House",
   description:
-    "Visit the Darling's FineJewels showroom in Sta. Cruz, Manila — fine gold and diamond jewelry, imported and local.",
+    `Visit the ${site.brandName} showroom in ${site.location.cityShort} — fine gold and diamond jewelry, imported and local.`,
 };
 
 const directionsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
@@ -27,8 +27,8 @@ export default function TheHousePage() {
         <PageHeading
           eyebrow="The House"
           title="The House of"
-          italicTitle="Darling’s"
-          description="From carefully selected pieces to personal service, Darling's FineJewels brings together timeless jewelry and modern elegance for clients who value beauty, craftsmanship and meaning."
+          italicTitle={site.shortName}
+          description={`From carefully selected pieces to personal service, ${site.brandName} brings together timeless jewelry and modern elegance for clients who value beauty, craftsmanship and meaning.`}
         />
 
         <section className="bg-ivory pb-28 md:pb-36">
@@ -38,7 +38,7 @@ export default function TheHousePage() {
                 <ImagePlaceholder
                   tone="ink"
                   eyebrow="Showroom Photography"
-                  caption="Interior — San Miguel Building"
+                  caption="Showroom — Interior"
                   className="h-full w-full"
                 />
               </div>

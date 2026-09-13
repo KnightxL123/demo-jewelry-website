@@ -10,7 +10,7 @@ import { Reveal } from "@/components/reveal";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Start an inquiry with Darling's FineJewels, or plan a visit to our Manila showroom.",
+    `Start an inquiry with ${site.brandName}, or plan a visit to our ${site.location.cityShort} showroom.`,
 };
 
 export default function ContactPage({

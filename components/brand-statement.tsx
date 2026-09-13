@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/reveal";
+import { site } from "@/data/site";
 
 export function BrandStatement() {
   return (
@@ -6,7 +7,7 @@ export function BrandStatement() {
       <div className="container-luxe">
         <Reveal>
           <span className="label-caps text-ink/45">
-            Darling&rsquo;s FineJewels &middot; Manila
+            {site.brandName} &middot; {site.location.cityShort}
           </span>
         </Reveal>
 

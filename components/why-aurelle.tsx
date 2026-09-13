@@ -1,12 +1,12 @@
-import { pillars } from "@/data/site";
+import { site, pillars } from "@/data/site";
 import { Reveal } from "@/components/reveal";
 
-export function WhyDarlings() {
+export function WhyAurelle() {
   return (
     <section className="bg-beige py-28 md:py-36">
       <div className="container-luxe">
         <Reveal>
-          <span className="label-caps text-ink/45">Why Darling&rsquo;s</span>
+          <span className="label-caps text-ink/45">Why {site.shortName}</span>
         </Reveal>
         <Reveal delay={0.1}>
           <h2 className="mt-5 max-w-2xl font-serif text-4xl text-ink sm:text-5xl">

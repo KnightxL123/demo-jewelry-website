@@ -11,7 +11,7 @@ export function SiteFooter() {
         <div className="md:col-span-2">
           <Logo light />
           <p className="label-caps-light mt-4 text-ivory/50">
-            Fine Jewelry &middot; Manila, Philippines
+            Fine Jewelry &middot; {site.location.city}
           </p>
           <p className="mt-8 max-w-xs text-[15px] leading-relaxed text-ivory/60">
             Premium gold and diamond pieces, imported and local, curated for
@@ -76,7 +76,7 @@ export function SiteFooter() {
 
       <div className="border-t border-ivory/10">
         <div className="container-luxe flex flex-col items-center justify-between gap-4 py-7 text-[11px] uppercase tracking-widest2 text-ivory/40 sm:flex-row">
-          <p>&copy; {new Date().getFullYear()} Darling&rsquo;s FineJewels by Candys</p>
+          <p>&copy; {new Date().getFullYear()} {site.brandName}</p>
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="hover:text-ivory/70">
               Privacy

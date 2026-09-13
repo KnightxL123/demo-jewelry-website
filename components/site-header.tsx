@@ -74,7 +74,7 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
           <Link
             href="/"
             className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0"
-            aria-label="Darling's FineJewels — home"
+            aria-label={`${site.brandName} — home`}
           >
             <Logo light={light} />
           </Link>

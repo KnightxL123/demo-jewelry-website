@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+import { site } from "@/data/site";
 import { buttonVariants } from "@/components/ui/button";
 
 const ease = [0.16, 1, 0.3, 1] as const;
@@ -49,7 +50,7 @@ export function Hero() {
           transition={{ delay: 0.3, duration: 0.8, ease }}
           className="label-caps-light mb-6 text-ivory/70"
         >
-          Darling&rsquo;s FineJewels &middot; Manila
+          {site.brandName} &middot; {site.location.cityShort}
         </motion.span>
 
         <motion.h1

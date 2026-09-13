@@ -3,7 +3,7 @@ import { Hero } from "@/components/hero";
 import { BrandStatement } from "@/components/brand-statement";
 import { FeaturedCollection } from "@/components/featured-collection";
 import { EditorialBreak } from "@/components/editorial-break";
-import { WhyDarlings } from "@/components/why-darlings";
+import { WhyAurelle } from "@/components/why-aurelle";
 import { HouseTeaser } from "@/components/house-teaser";
 import { SocialSection } from "@/components/social-section";
 import { InquirySection } from "@/components/inquiry-section";
@@ -17,7 +17,7 @@ export default function HomePage() {
         <BrandStatement />
         <FeaturedCollection />
         <EditorialBreak />
-        <WhyDarlings />
+        <WhyAurelle />
         <HouseTeaser />
         <SocialSection />
         <InquirySection />
