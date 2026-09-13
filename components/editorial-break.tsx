@@ -2,8 +2,7 @@ import Image from "next/image";
 
 import { Reveal } from "@/components/reveal";
 
-const EDITORIAL_IMAGE =
-  "https://d8j0ntlcm91z4.cloudfront.net/user_3IKxAOa84X7Sjcy4i2sT4qTHmID/hf_20260908_162015_8dfd0131-2496-403a-8be3-686980d0713d.png";
+const EDITORIAL_IMAGE = "/images/editorial-lifestyle.png";
 
 export function EditorialBreak() {
   return (

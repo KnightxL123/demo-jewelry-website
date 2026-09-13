@@ -57,8 +57,7 @@ export const products: Product[] = [
     detail:
       "A fine gold chain finished with a softly sculpted pendant detail. Designed to be layered or worn alone, it carries the warmth of 18K gold in a timeless, everyday form.",
     placeholderTone: "beige",
-    image:
-      "https://d8j0ntlcm91z4.cloudfront.net/user_3IKxAOa84X7Sjcy4i2sT4qTHmID/hf_20260908_162015_1c0fc7db-3d6e-41f7-b928-67f4b117faa1.png",
+    image: "/images/18k-gold-necklace.png",
   },
   {
     slug: "classic-diamond-studs",
